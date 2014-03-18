@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+     "label":"saturday",
+    "date":18,
+    "slots":[
+        {
+         "id":"1"
+         "begin":"09:00",
+         "end":"10:30",
+         "conferences":[
+           {
+              "title":"conference 1",
+              "id":"1",
+              "room":"Scene A" 
+              "place":"150" 
+              "crowds":20,
+              "forecastcrowds":3,
+              "nbfavorite":12,
+              "speakers": [
+                { "lastname":"toto", "firstname":"trugludu", "twitter":"#optionnel", id:"1" }
+              ]
+            }              
+         
+         ]
+        }
+    ]
+  }
+]

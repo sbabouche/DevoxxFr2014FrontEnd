@@ -1,0 +1,6 @@
+name: devoxx_2014
+version: 0.0.1
+description: A  web application for devoxxFR 2014
+dependencies:
+  browser: any
+  angular: any

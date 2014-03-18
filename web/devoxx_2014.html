@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>DevoxxFR 2014</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body schedule ng-cloak>
+  <div ng-switch="ctrl.daysLoaded && ctrl.categoriesLoaded">
+    <div ng-switch-when="false">
+      {{ctrl.message}}
+    </div>
+    <div ng-switch-when="true">
+      <h3>Day List</h3>
+
+      <nav id="days-choise">
+        <div id="days-list">
+          <ul>
+            <li ng-repeat="day in ctrl.allDays | orderBy:'date'" ng-click="ctrl.selectDay(day)">                
+                {{day.name}}
+            </li>
+          </ul>
+        </div>      
+      </nav>
+      
+      <nav id="schedule-slots">
+        <div id="slot-list">
+          <ul>
+            <li ng-repeat="slot in ctrl.selectedDaySlots | orderBy:'hour' ">
+              <slot slot="slot"></slot>
+            </li>
+          </ul>
+        </div>      
+      </nav>
+      
+    </div>
+
+  </div>
+
+  <script src="packages/shadow_dom/shadow_dom.min.js"></script>
+  <script type="application/dart" src="main.dart"></script>
+  <script type="text/javascript" src="packages/browser/dart.js"></script>
+</body>
+</html>
